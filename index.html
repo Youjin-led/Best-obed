@@ -125,11 +125,6 @@ mark{background:transparent;color:inherit;box-shadow:inset 0 -0.32em 0 var(--y);
 .ic-lg{width:26px;height:26px}
 .ic-f{fill:currentColor;stroke:none}
 
-/* чипы и метки */
-.chip{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:var(--soft);color:var(--mut)}
-.chip.y{background:var(--y);color:#17130E}
-.chip.g{background:#EAF0E2;color:#4C6B31}
-.chip.t{background:#F8E8E1;color:#A53A24}
 .lbl{font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--mut)}
 
 /* ================= верхняя полоса ================= */
@@ -307,42 +302,8 @@ section{padding:72px 0}
 .ok h4{font-size:26px}
 .ok p{color:var(--mut);max-width:46ch}
 
-/* ================= меню ================= */
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
-.tab{border:1.5px solid var(--line);padding:10px 18px;font-size:14px;font-weight:600;border-radius:999px;color:var(--mut);transition:background .15s,color .15s,border-color .15s}
-.tab:hover{border-color:var(--line-2);color:var(--ink)}
-.tab[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.sheet{border:1px solid var(--line);border-radius:var(--r);overflow-x:auto;background:var(--bg)}
-table{width:100%;min-width:840px}
-th,td{text-align:left;padding:15px 18px;border-bottom:1px solid var(--line);vertical-align:top}
-thead th{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:600;background:var(--soft)}
-thead th:first-child{border-radius:0}
-tbody th{font-size:14px;font-weight:600;color:var(--mut);white-space:nowrap}
-td b{display:block;font-size:15px;font-weight:600}
-td span{font-size:12.5px;color:var(--mut);font-variant-numeric:tabular-nums;font-weight:500}
-tr:last-child th,tr:last-child td{border-bottom:0}
-tbody tr{transition:background .12s}
-tbody tr:hover{background:var(--soft)}
-.sheet-note{display:flex;justify-content:space-between;gap:16px;padding:14px 18px;background:var(--soft);font-size:13.5px;flex-wrap:wrap;border-top:1px solid var(--line);color:var(--mut)}
-.sheet-note b{color:var(--ink)}
-
-.dishes{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-@media (max-width:1080px){.dishes{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:560px){.dishes{grid-template-columns:1fr}}
-.dish{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s,border-color .2s}
-.dish:hover{transform:translateY(-4px);box-shadow:var(--sh);border-color:var(--line-2)}
-.dish .phb{margin:0;background:var(--soft);padding:16px 20px 0}
-.dish .phb .plate{transform:scale(1);transition:transform .35s}
-.dish:hover .phb .plate{transform:scale(1.045)}
 .plate{display:block;border-radius:14px;background:linear-gradient(180deg,#FBF6EC,#F1E9D9);box-shadow:inset 0 0 0 1px rgba(23,19,14,.06)}
 .plate svg{width:100%;height:auto;display:block}
-.dish .tx{padding:15px 17px 17px;display:flex;flex-direction:column;gap:9px;flex:1}
-.dish h4{font-size:16.5px;line-height:1.25}
-.kbju{display:flex;gap:6px}
-.kbju .k{font-size:11.5px;padding:4px 8px;border-radius:8px;background:var(--soft);color:var(--mut);font-weight:600}
-.kbju .k b{font-family:var(--fh);color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
-.dish .end{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding-top:11px;border-top:1px solid var(--line);font-size:12.5px;color:var(--mut)}
-.dish .kcal{font-family:var(--fh);font-weight:700;font-size:14px;font-variant-numeric:tabular-nums;color:var(--ink)}
 
 /* ================= день кухни ================= */
 .day{background:var(--deep);color:var(--deep-ink);padding:40px 36px;border-radius:24px;position:relative;overflow:hidden}
@@ -514,7 +475,6 @@ footer ul a:hover{color:var(--y)}
     <nav class="nav" aria-label="Основная навигация">
       <a href="#quality">Почему мы</a>
       <a href="#calc">Расчёт</a>
-      <a href="#menu">Меню</a>
       <a href="#day">Производство</a>
       <a href="#cases">Кейсы</a>
       <a href="#faq">Вопросы</a>
@@ -538,7 +498,7 @@ footer ul a:hover{color:var(--y)}
       <p class="lead">Комплексы от <span class="num" data-f="price">420</span> ₽, шведская линия и индивидуальные рационы для команд от 30 человек. Готовим утром на своей кухне и фиксируем цену на квартал.</p>
       <div class="acts">
         <a class="btn btn-y" href="#calc">Рассчитать стоимость<svg class="ic ic-sm"><use href="#i-arrow"/></svg></a>
-        <a class="btn btn-o" href="#menu">Меню и цены недели</a>
+        <a class="btn btn-o" href="#day">День кухни</a>
       </div>
       <div class="hero-trust">
         <span class="stars" aria-label="Рейтинг 4,9 из 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
@@ -743,44 +703,6 @@ footer ul a:hover{color:var(--y)}
   </div>
 </section>
 
-<!-- ============ меню ============ -->
-<section id="menu">
-  <div class="w">
-    <div class="sec-h" data-rv>
-      <h2><span class="k">03 · Меню</span>Меню недели висит на стене и на сайте</h2>
-      <p>6–12 сентября. Граммовки, калорийность и аллергены — у каждой позиции. Полное КБЖУ выгружается в PDF для отдела кадров.</p>
-    </div>
-
-    <div class="tabs" role="group" aria-label="Выбор комплекса" data-rv>
-      <button class="tab" type="button" data-menu="standard" aria-pressed="true">Стандарт</button>
-      <button class="tab" type="button" data-menu="fish" aria-pressed="false">Рыбное</button>
-      <button class="tab" type="button" data-menu="veg" aria-pressed="false">Вегетарианское</button>
-    </div>
-
-    <div class="sheet" data-rv>
-      <table>
-        <thead><tr><th>Курс</th><th>Понедельник</th><th>Вторник</th><th>Среда</th><th>Четверг</th><th>Пятница</th></tr></thead>
-        <tbody id="mbody"></tbody>
-      </table>
-      <div class="sheet-note">
-        <span>Комплекс из пяти позиций · <b class="num"><span data-f="price">420</span> ₽</b> с НДС, приборы и салфетки входят</span>
-        <span>→ PDF с полным КБЖУ и аллергенами пришлём для отдела кадров</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ свободный выбор ============ -->
-<section style="padding-top:0">
-  <div class="w">
-    <div class="sec-h" data-rv>
-      <h2><span class="k">04 · Свободный выбор</span>Если формат свободный — сотрудник собирает сам</h2>
-      <p>Восемь позиций из 4 500 в базе, у каждой — белки, жиры, углеводы и калорийность.</p>
-    </div>
-    <div class="dishes" id="dishes"></div>
-  </div>
-</section>
-
 <!-- ============ день кухни ============ -->
 <section id="day" style="padding-top:0">
   <div class="w">
@@ -803,7 +725,7 @@ footer ul a:hover{color:var(--y)}
 <section id="cases" style="padding-top:0">
   <div class="w">
     <div class="sec-h" data-rv>
-      <h2><span class="k">05 · Кейсы</span>Что изменилось в цифрах</h2>
+      <h2><span class="k">03 · Кейсы</span>Что изменилось в цифрах</h2>
       <p>Названия компаний раскрываем в коммерческом предложении, метрики согласованы с клиентами.</p>
     </div>
     <div class="cases">
@@ -833,7 +755,7 @@ footer ul a:hover{color:var(--y)}
 <section style="padding-top:0">
   <div class="w">
     <div class="sec-h" data-rv>
-      <h2><span class="k">06 · Отзывы</span>Что говорят официанты первого дня</h2>
+      <h2><span class="k">04 · Отзывы</span>Что говорят официанты первого дня</h2>
       <p>Реальные голоса после пробных обедов и первого месяца работы.</p>
     </div>
     <div class="revs">
@@ -860,7 +782,7 @@ footer ul a:hover{color:var(--y)}
 <section id="faq" style="padding-top:0">
   <div class="w">
     <div class="sec-h" data-rv>
-      <h2><span class="k">07 · Вопросы</span>Что спрашивают до подписания</h2>
+      <h2><span class="k">05 · Вопросы</span>Что спрашивают до подписания</h2>
       <p>Шесть вопросов из первого звонка. Блок закрыт разметкой FAQPage для поиска.</p>
     </div>
     <div class="faq" data-rv>
@@ -935,7 +857,7 @@ footer ul a:hover{color:var(--y)}
       </ul></div>
       <div><h5>Клиенту</h5><ul>
         <li><a href="#calc">Расчёт стоимости</a></li>
-        <li><a href="#menu">Меню недели</a></li>
+        <li><a href="#quality">Наши гарантии</a></li>
         <li><a href="#day">День кухни</a></li>
         <li><a href="#faq">Вопросы и ответы</a></li>
       </ul></div>
@@ -1101,67 +1023,6 @@ footer ul a:hover{color:var(--y)}
     document.getElementById("rTotal").textContent=fm(total);
   }
 
-  /* ---------- меню недели ---------- */
-  var M={
-    standard:[
-      ["Суп","Борщ с говядиной","Крем-суп из тыквы","Куриная лапша","Щи из свежей капусты","Сырный с гренками"],
-      ["Горячее","Бифштекс из цыплёнка","Курица терияки","Говядина по-строгановски","Котлета «Домашняя»","Индейка в сливках"],
-      ["Гарнир","Пюре картофельное","Булгур с овощами","Гречка с грибами","Рис с куркумой","Паста пенне"],
-      ["Салат","«Летний» с айсбергом","Морковь по-корейски","Винегрет","Капуста с огурцом","Греческий"]
-    ],
-    fish:[
-      ["Суп","Уха из судака","Финский с лососем","Том-ям с креветкой","Суп с треской","Крем-суп из брокколи"],
-      ["Горячее","Треска на пару","Хек в кляре","Лосось на гриле","Судак по-польски","Рыбные тефтели"],
-      ["Гарнир","Рис с лимоном","Картофель по-деревенски","Кускус с овощами","Овощи на пару","Булгур"],
-      ["Салат","Морская капуста","Свёкла с орехом","Салат с тунцом","Огурцы с укропом","Капустный"]
-    ],
-    veg:[
-      ["Суп","Чечевичный","Крем-суп из тыквы","Минестроне","Грибной","Гороховый"],
-      ["Горячее","Нут с томатами","Овощная лазанья","Котлета из киноа","Фалафель","Тофу терияки"],
-      ["Гарнир","Кускус с зеленью","Рис басмати","Картофель запечённый","Гречка","Паста с песто"],
-      ["Салат","Греческий","Витаминный","Свёкла с яблоком","Морковь с изюмом","Айсберг с нутом"]
-    ]
-  };
-  var G=[["250 / 180 г","246 ккал"],["150 / 140 г","288 ккал"],["180 г","210 ккал"],["120 г","95 ккал"]];
-  function drawMenu(key){
-    var out="";
-    M[key].forEach(function(row,ri){
-      out+="<tr><th>"+row[0]+"</th>";
-      for(var i=1;i<6;i++)out+="<td><b>"+row[i]+"</b><span>"+G[ri][0]+" · "+G[ri][1]+"</span></td>";
-      out+="</tr>";
-    });
-    document.getElementById("mbody").innerHTML=out;
-  }
-  document.querySelectorAll(".tab").forEach(function(t){
-    t.addEventListener("click",function(){
-      document.querySelectorAll(".tab").forEach(function(x){x.setAttribute("aria-pressed","false")});
-      t.setAttribute("aria-pressed","true");
-      drawMenu(t.dataset.menu);
-    });
-  });
-
-  /* ---------- блюда ---------- */
-  var dishes=[
-    {n:"Омлет паровой с зеленью",kb:["Б 14,1","Ж 13,0","У 4,0"],k:"189",ch:["завтрак"],c:["#E9C85E","#CFE0B8","#D6A24F"]},
-    {n:"Борщ с говядиной и сметаной",kb:["Б 11,4","Ж 9,8","У 18,2"],k:"246",ch:["хит недели","y"],c:["#B13A26","#B9CBA3","#E8D7AC"]},
-    {n:"Бифштекс из цыплёнка, капуста",kb:["Б 30,3","Ж 11,7","У 6,3"],k:"288",ch:["без глютена"],c:["#A3442A","#7E9B4E","#E8D7AC"]},
-    {n:"Сырники с абрикосовым джемом",kb:["Б 9,9","Ж 4,7","У 46,3"],k:"354",ch:["завтрак"],c:["#D8C79A","#E7A85C","#B9CBA3"]},
-    {n:"Салат «Летний» с айсбергом",kb:["Б 2,1","Ж 6,4","У 5,8"],k:"95",ch:["до 300 ккал"],c:["#8FA96A","#DA6B4B","#E8D7AC"]},
-    {n:"Треска на пару, рис, лимон",kb:["Б 24,6","Ж 5,1","У 28,4"],k:"262",ch:["без лактозы"],c:["#E7DFC8","#C98A3E","#96B27A"]},
-    {n:"Нут с томатами и кинзой",kb:["Б 14,0","Ж 6,2","У 32,1"],k:"265",ch:["веган"],c:["#C7A05C","#C0492C","#8FA96A"]},
-    {n:"Паста болоньезе, пармезан",kb:["Б 21,7","Ж 12,9","У 51,3"],k:"412",ch:["берут чаще всего","y"],c:["#C0492C","#E8D7AC","#7E9B4E"]}
-  ];
-  var dishHtml="";
-  dishes.forEach(function(d){
-    var chips="";
-    d.ch.forEach(function(c){chips+='<span class="chip'+(c==="y"?" y":"")+'">'+c+"</span>"});
-    var kb="";
-    d.kb.forEach(function(v){kb+='<span class="k num">'+v.split(" ")[0]+' <b>'+v.split(" ")[1]+'</b></span>'});
-    dishHtml+='<article class="dish"><figure class="phb">'+plate(d.c)+'</figure><div class="tx"><h4>'+d.n+'</h4>'+
-      '<div class="kbju">'+kb+'</div><div class="end"><span>'+chips+'</span><span class="kcal num">'+d.k+' ккал</span></div></div></article>';
-  });
-  document.getElementById("dishes").innerHTML=dishHtml;
-
   /* ---------- формы ---------- */
   document.getElementById("finalForm").addEventListener("submit",function(e){
     e.preventDefault();
@@ -1193,7 +1054,6 @@ footer ul a:hover{color:var(--y)}
     document.querySelectorAll("[data-rv]").forEach(function(el){el.classList.add("in")});
   }
 
-  drawMenu("standard");
   setCity("msk");
   calc();
 })();
