@@ -216,47 +216,13 @@ h1{font-size:clamp(40px,5.4vw,72px);margin-top:18px;line-height:1.02}
 .belt-desc .dash{flex:1;height:1px;background:repeating-linear-gradient(90deg,var(--deep-line) 0 7px,transparent 7px 14px)}
 .belt-desc b{color:var(--deep-ink);font-weight:600}
 
-/* ================= показатели ================= */
-.stats{padding:64px 0 8px}
 .sec-h{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:34px;flex-wrap:wrap}
 .sec-h h2{font-size:clamp(30px,3.6vw,48px);max-width:24ch}
 .sec-h h2 .k{display:block;font-family:var(--fb);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-bottom:12px}
 .sec-h p{color:var(--mut);font-size:16px;max-width:44ch}
 .sec-h .lnk{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;border-bottom:2px solid var(--y);padding-bottom:3px;white-space:nowrap}
-.grid-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-@media (max-width:1080px){.grid-stats{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:640px){.grid-stats{grid-template-columns:repeat(2,1fr)}}
-.stat{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:22px;transition:transform .18s,box-shadow .18s}
-.stat:hover{transform:translateY(-3px);box-shadow:var(--sh)}
-.stat .bc{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--soft);color:var(--ink);margin-bottom:14px}
-.stat b{display:block;font-family:var(--fh);font-weight:700;font-size:clamp(28px,2.6vw,40px);font-variant-numeric:tabular-nums;line-height:1;letter-spacing:-.02em}
-.stat span{display:block;font-size:13.5px;color:var(--mut);margin-top:8px;line-height:1.45}
 
-/* ================= логотипы ================= */
-.logos{border-top:1px solid var(--line)} 
-.logos .cap{display:flex;justify-content:center;margin:0 auto;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding-top:44px}
-.log-row{display:flex;align-items:center;gap:8px 44px;flex-wrap:wrap;justify-content:center;padding:22px 0 8px}
-.logo1{font-family:var(--fh);font-weight:700;font-size:19px;letter-spacing:.02em;color:#9E9484;display:inline-flex;align-items:baseline}
-.logo1 i{width:9px;height:9px;background:currentColor;display:inline-block;margin-right:8px;opacity:.55}
-@media (max-width:640px){.log-row{gap:22px}}
-
-/* ================= типы площадок ================= */
 section{padding:72px 0}
-.types{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-@media (max-width:1080px){.types{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:560px){.types{grid-template-columns:1fr}}
-.type{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s,border-color .2s}
-.type:hover{transform:translateY(-5px);box-shadow:var(--sh-lg);border-color:var(--line-2)}
-.type .num-t{display:flex;justify-content:space-between;align-items:center;padding:14px 16px 0}
-.type .n{font-family:var(--fh);font-weight:700;font-size:13px;color:var(--line-2)}
-.type .ph{background:var(--soft);padding:6px 22px 0;margin:0;border-radius:14px 14px 0 0}
-.type .ph svg{width:100%;height:auto;display:block}
-.type .tx{padding:18px 19px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
-.type h3{font-size:20px}
-.type p{font-size:14.5px;color:var(--mut)}
-.type .from{margin-top:auto;padding-top:13px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-size:13.5px;color:var(--mut)}
-.type .from b{font-family:var(--fh);font-size:18px;color:var(--ink);font-variant-numeric:tabular-nums}
-.type .from .mini{display:inline-flex;gap:6px;align-items:center}
 
 /* ================= как работаем ================= */
 .how{background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -546,7 +512,7 @@ footer ul a:hover{color:var(--y)}
       The Best Obed
     </a>
     <nav class="nav" aria-label="Основная навигация">
-      <a href="#types">Кому готовим</a>
+      <a href="#quality">Почему мы</a>
       <a href="#calc">Расчёт</a>
       <a href="#menu">Меню</a>
       <a href="#day">Производство</a>
@@ -642,150 +608,12 @@ footer ul a:hover{color:var(--y)}
   </div>
 </div>
 
-<!-- ============ показатели ============ -->
-<div class="stats">
-  <div class="w">
-    <div class="grid-stats" data-rv>
-      <div class="stat"><span class="bc"><svg class="ic"><use href="#i-users"/></svg></span><b class="num">184</b><span>офиса на регулярной доставке</span></div>
-      <div class="stat"><span class="bc"><svg class="ic"><use href="#i-plate"/></svg></span><b class="num">5 200</b><span>порций в день с двух кухонь</span></div>
-      <div class="stat"><span class="bc"><svg class="ic"><use href="#i-clock"/></svg></span><b class="num">98,6 %</b><span>доставок в согласованное окно за 2025 год</span></div>
-      <div class="stat"><span class="bc"><svg class="ic"><use href="#i-refresh"/></svg></span><b class="num">4 × мес</b><span>смена меню, повторов нет</span></div>
-      <div class="stat"><span class="bc"><svg class="ic"><use href="#i-shield"/></svg></span><b class="num">44-ФЗ</b><span>контракты исполняем с 2019 года</span></div>
-    </div>
-  </div>
-</div>
-
-<div class="logos">
-  <div class="w">
-    <div class="cap">Питанием обеспечиваем самостоятельные команды и компании из списков</div>
-    <div class="log-row" aria-label="Нам доверяют">
-      <span class="logo1"><i></i>Меридиан</span>
-      <span class="logo1"><i></i>ГЕЛИОС</span>
-      <span class="logo1"><i></i>Квадро Логистик</span>
-      <span class="logo1"><i></i>Северный порт</span>
-      <span class="logo1"><i></i>СтальПро</span>
-      <span class="logo1"><i></i>ФинСити</span>
-    </div>
-  </div>
-</div>
-
-<!-- ============ типы площадок ============ -->
-<section id="types">
-  <div class="w">
-    <div class="sec-h" data-rv>
-      <h2><span class="k">01 · Форматы</span>Кормим четыре типа площадок</h2>
-      <p>График, упаковка и логистика у них разные. Ниже только то, что меняется: цену и сервис сразу сориентируем под ваш объект.</p>
-    </div>
-
-    <div class="types">
-      <article class="type" data-rv>
-        <div class="num-t"><span class="lbl">Офис</span><span class="n">01</span></div>
-        <figure class="ph">
-          <svg viewBox="0 0 400 210" role="img" aria-label="Комплексный обед в боксе и стакан">
-            <rect x="46" y="40" width="308" height="140" rx="22" fill="#F3ECE1"/>
-            <rect x="66" y="62" width="158" height="98" rx="12" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
-            <path d="M145 62v98" stroke="#E3DCCB" stroke-width="1.5"/>
-            <ellipse cx="106" cy="104" rx="30" ry="18" fill="#D98B2E"/>
-            <ellipse cx="182" cy="102" rx="26" ry="17" fill="#B0442A"/>
-            <ellipse cx="112" cy="128" rx="24" ry="13" fill="#C9D9B1"/>
-            <rect x="222" y="78" width="118" height="70" rx="12" fill="#FFFDF8" stroke="#E3DCCB" stroke-width="1.5"/>
-            <ellipse cx="266" cy="112" rx="26" ry="16" fill="#B9CBA3"/>
-            <ellipse cx="312" cy="112" rx="22" ry="14" fill="#E8D7AC"/>
-            <rect x="306" y="52" width="24" height="40" rx="8" fill="#EAF3E7" stroke="#D9E4D2" stroke-width="1.5"/>
-            <line x1="312" y1="48" x2="323" y2="84" stroke="#C9D9B1" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-        </figure>
-        <div class="tx">
-          <h3>Офисы и бизнес-центры</h3>
-          <p>Комплексы или шведская линия. Заказ до 17:00 накануне, правки до 9:30. Упаковку забираем на утилизацию.</p>
-          <div class="from"><span class="mini">Комплекс от</span><b class="num"><span data-f="price">420</span> ₽</b></div>
-        </div>
-      </article>
-
-      <article class="type" data-rv>
-        <div class="num-t"><span class="lbl">Смены</span><span class="n">02</span></div>
-        <figure class="ph">
-          <svg viewBox="0 0 400 210" role="img" aria-label="Линия раздачи для смен">
-            <rect x="40" y="50" width="320" height="120" rx="18" fill="#EFE9DC"/>
-            <rect x="60" y="70" width="120" height="44" rx="10" fill="#2F3B2E"/>
-            <rect x="70" y="60" width="100" height="14" rx="5" fill="#443A29"/>
-            <rect x="200" y="76" width="120" height="46" rx="10" fill="#3B3E4A"/>
-            <rect x="210" y="66" width="100" height="12" rx="5" fill="#2E3140"/>
-            <g fill="#C9D9B1" opacity=".85"><circle cx="96" cy="112" r="11"/><circle cx="124" cy="112" r="11"/></g>
-            <ellipse cx="250" cy="112" rx="34" ry="13" fill="#E8D7AC"/>
-            <ellipse cx="284" cy="112" rx="20" ry="11" fill="#D98B2E"/>
-            <rect x="40" y="180" width="320" height="14" rx="7" fill="#C9D2BC"/>
-            <circle cx="330" cy="82" r="22" fill="#FFFDF8" stroke="#E3DCCB" stroke-width="1.5"/>
-            <path d="M330 74v16M322 82h16" stroke="#B0442A" stroke-width="3" stroke-linecap="round"/>
-            <path d="M318 70l-8 10h5l-8 10" fill="none" stroke="#8B8172" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </figure>
-        <div class="tx">
-          <h3>Производства и смены</h3>
-          <p>Три рейса в сутки, порции 550–700 г, раздача на две линии с шефом на площадке.</p>
-          <div class="from"><span class="mini">Порция от</span><b class="num">380 ₽</b></div>
-        </div>
-      </article>
-
-      <article class="type" data-rv>
-        <div class="num-t"><span class="lbl">Медицина</span><span class="n">03</span></div>
-        <figure class="ph">
-          <svg viewBox="0 0 400 210" role="img" aria-label="Запаянный бокс с диетическим питанием">
-            <rect x="46" y="44" width="308" height="142" rx="20" fill="#F3ECE1"/>
-            <rect x="70" y="62" width="160" height="104" rx="12" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
-            <path d="M150 62v104M70 120h160" stroke="#E9E2D4" stroke-width="2"/>
-            <ellipse cx="110" cy="94" rx="26" ry="15" fill="#E4C464"/>
-            <ellipse cx="187" cy="94" rx="25" ry="14" fill="#B9CBA3"/>
-            <ellipse cx="110" cy="148" rx="26" ry="15" fill="#D9A667"/>
-            <ellipse cx="187" cy="148" rx="25" ry="14" fill="#E8D7AC"/>
-            <rect x="248" y="72" width="88" height="84" rx="10" fill="#FFFDF8" stroke="#E3DCCB" stroke-width="1.5"/>
-            <path d="M248 96h88" stroke="#E9E2D4" stroke-width="1.5"/>
-            <ellipse cx="282" cy="122" rx="24" ry="14" fill="#B9CBA3"/>
-            <line x1="278" y1="66" x2="266" y2="40" stroke="#B0442A" stroke-width="4" stroke-linecap="round"/>
-            <circle cx="266" cy="40" r="7" fill="#B0442A"/>
-            <path d="M262 40h8M266 36v8" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </figure>
-        <div class="tx">
-          <h3>Медицинские учреждения</h3>
-          <p>Диетические столы, запаянные боксы с маркировкой, ночной рейс в 23:30. Санпропускники у курьеров.</p>
-          <div class="from"><span class="mini">Комплекс от</span><b class="num">460 ₽</b></div>
-        </div>
-      </article>
-
-      <article class="type" data-rv>
-        <div class="num-t"><span class="lbl">Мероприятия</span><span class="n">04</span></div>
-        <figure class="ph">
-          <svg viewBox="0 0 400 210" role="img" aria-label="Фуршет: канапе и напитки">
-            <rect x="46" y="44" width="308" height="142" rx="20" fill="#F3ECE1"/>
-            <rect x="62" y="62" width="134" height="96" rx="12" fill="#FFFFFF" stroke="#E3DCCB" stroke-width="1.5"/>
-            <path d="M78 88q20-10 40 0q20 10 40 0l-8 40H86z" fill="#F3ECE1"/>
-            <line x1="96" y1="96" x2="126" y2="58" stroke="#C9B79C" stroke-width="2.5" stroke-linecap="round"/>
-            <circle cx="138" cy="60" r="9" fill="#B0442A"/><circle cx="96" cy="72" r="8" fill="#6E8F4B"/><circle cx="122" cy="72" r="8" fill="#E07A3F"/>
-            <rect x="212" y="66" width="26" height="58" rx="9" fill="#EAF3E7" stroke="#D9E4D2" stroke-width="1.5"/>
-            <ellipse cx="225" cy="124" rx="13" ry="5" fill="#D98B2E"/>
-            <rect x="286" y="70" width="26" height="54" rx="9" fill="#F8E8E1" stroke="#E3DCCB" stroke-width="1.5"/>
-            <ellipse cx="299" cy="124" rx="13" ry="5" fill="#E4C464"/>
-            <path d="M204 140l96 2" stroke="#E3DCCB" stroke-width="2" stroke-dasharray="5 6"/>
-            <rect x="64" y="162" width="120" height="14" rx="6" fill="#EFE9DC"/><rect x="220" y="164" width="92" height="12" rx="6" fill="#EFE9DC"/>
-          </svg>
-        </figure>
-        <div class="tx">
-          <h3>Фуршеты и мероприятия</h3>
-          <p>Фуршет и кофе-брейк на 20–400 гостей. Посуда, текстиль, персонал и вывоз — наши.</p>
-          <div class="from"><span class="mini">С человека от</span><b class="num">1 100 ₽</b></div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
 <!-- ============ как работаем ============ -->
 <div class="how">
   <section>
     <div class="w">
       <div class="sec-h" data-rv>
-        <h2><span class="k">02 · Процесс</span>От заявки до обеда — четыре шага</h2>
+        <h2><span class="k">01 · Процесс</span>От заявки до обеда — четыре шага</h2>
         <a class="lnk" href="#calc">Рассчитать за минуту<svg class="ic ic-sm"><use href="#i-arrow"/></svg></a>
       </div>
       <div class="steps">
@@ -799,7 +627,7 @@ footer ul a:hover{color:var(--y)}
 </div>
 
 <!-- ============ качество ============ -->
-<div class="quality">
+<div class="quality" id="quality">
   <section>
     <div class="w">
       <div class="ql">
@@ -827,7 +655,7 @@ footer ul a:hover{color:var(--y)}
 <section id="calc">
   <div class="w">
     <div class="sec-h" data-rv>
-      <h2><span class="k">03 · Расчёт</span>Пять вопросов — и вы видите бюджет</h2>
+      <h2><span class="k">02 · Расчёт</span>Пять вопросов — и вы видите бюджет</h2>
       <p>Та же формула, что уходит в коммерческое предложение. Без звонка и «уточним при встрече».</p>
     </div>
 
@@ -919,7 +747,7 @@ footer ul a:hover{color:var(--y)}
 <section id="menu">
   <div class="w">
     <div class="sec-h" data-rv>
-      <h2><span class="k">04 · Меню</span>Меню недели висит на стене и на сайте</h2>
+      <h2><span class="k">03 · Меню</span>Меню недели висит на стене и на сайте</h2>
       <p>6–12 сентября. Граммовки, калорийность и аллергены — у каждой позиции. Полное КБЖУ выгружается в PDF для отдела кадров.</p>
     </div>
 
@@ -946,7 +774,7 @@ footer ul a:hover{color:var(--y)}
 <section style="padding-top:0">
   <div class="w">
     <div class="sec-h" data-rv>
-      <h2><span class="k">05 · Свободный выбор</span>Если формат свободный — сотрудник собирает сам</h2>
+      <h2><span class="k">04 · Свободный выбор</span>Если формат свободный — сотрудник собирает сам</h2>
       <p>Восемь позиций из 4 500 в базе, у каждой — белки, жиры, углеводы и калорийность.</p>
     </div>
     <div class="dishes" id="dishes"></div>
@@ -975,7 +803,7 @@ footer ul a:hover{color:var(--y)}
 <section id="cases" style="padding-top:0">
   <div class="w">
     <div class="sec-h" data-rv>
-      <h2><span class="k">06 · Кейсы</span>Что изменилось в цифрах</h2>
+      <h2><span class="k">05 · Кейсы</span>Что изменилось в цифрах</h2>
       <p>Названия компаний раскрываем в коммерческом предложении, метрики согласованы с клиентами.</p>
     </div>
     <div class="cases">
@@ -1005,7 +833,7 @@ footer ul a:hover{color:var(--y)}
 <section style="padding-top:0">
   <div class="w">
     <div class="sec-h" data-rv>
-      <h2><span class="k">07 · Отзывы</span>Что говорят официанты первого дня</h2>
+      <h2><span class="k">06 · Отзывы</span>Что говорят официанты первого дня</h2>
       <p>Реальные голоса после пробных обедов и первого месяца работы.</p>
     </div>
     <div class="revs">
@@ -1032,7 +860,7 @@ footer ul a:hover{color:var(--y)}
 <section id="faq" style="padding-top:0">
   <div class="w">
     <div class="sec-h" data-rv>
-      <h2><span class="k">08 · Вопросы</span>Что спрашивают до подписания</h2>
+      <h2><span class="k">07 · Вопросы</span>Что спрашивают до подписания</h2>
       <p>Шесть вопросов из первого звонка. Блок закрыт разметкой FAQPage для поиска.</p>
     </div>
     <div class="faq" data-rv>
@@ -1100,10 +928,10 @@ footer ul a:hover{color:var(--y)}
         </div>
       </div>
       <div><h5>Услуги</h5><ul>
-        <li><a href="#types">Обеды в офис</a></li>
-        <li><a href="#types">Питание для смен</a></li>
-        <li><a href="#types">Медучреждения</a></li>
-        <li><a href="#types">Кейтеринг мероприятий</a></li>
+        <li><a href="#calc">Обеды в офис</a></li>
+        <li><a href="#calc">Питание для смен</a></li>
+        <li><a href="#calc">Медучреждения</a></li>
+        <li><a href="#calc">Кейтеринг мероприятий</a></li>
       </ul></div>
       <div><h5>Клиенту</h5><ul>
         <li><a href="#calc">Расчёт стоимости</a></li>
