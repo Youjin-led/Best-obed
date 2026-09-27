@@ -302,25 +302,19 @@ section{padding:72px 0}
 
 
 /* ================= день кухни ================= */
-.day{background:var(--deep);color:var(--deep-ink);padding:40px 36px;border-radius:24px;position:relative;overflow:hidden}
-.day::before{content:"";position:absolute;inset:0;background:radial-gradient(46% 50% at 8% 0%,rgba(255,196,0,.07),transparent 70%)}
-.day h2{color:var(--deep-ink);font-size:clamp(26px,3.2vw,42px);max-width:24ch;margin-top:12px}
-.tl{display:grid;grid-template-columns:repeat(6,1fr);margin-top:30px;border-top:1px solid var(--deep-line);position:relative}
-@media (max-width:980px){.tl{grid-template-columns:1fr 1fr 1fr}}
-@media (max-width:560px){.tl{grid-template-columns:1fr}}
-.tp{padding:24px 18px 12px 0;border-right:1px solid var(--deep-line);position:relative}
-.tp:nth-child(3n){border-right:0}
-@media (max-width:980px){.tp:nth-child(3n){border-right:1px solid var(--deep-line)}.tp:nth-child(6n){border-right:0}}
-@media (min-width:981px){.tp:nth-child(6n){border-right:0}}
-.tp::before{content:"";position:absolute;top:-4px;left:0;width:8px;height:8px;border-radius:50%;background:var(--y);box-shadow:0 0 0 4px rgba(255,196,0,.18)}
-.tp time{display:block;font-family:var(--fh);font-weight:700;font-size:22px;color:var(--y);font-variant-numeric:tabular-nums;margin-bottom:8px}
-.tp b{display:block;font-size:15.5px;margin-bottom:5px;font-family:var(--fh);font-weight:600;color:var(--deep-ink)}
-.tp p{font-size:13.5px;color:var(--deep-mut)}
-.tp .icx{display:none}
+.prod{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:980px){.prod{grid-template-columns:1fr}}
+.pcard{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin:0}
+.pcard img{width:100%;height:230px;object-fit:cover;display:block;background:var(--soft)}
+.pcard figcaption{padding:18px 20px 20px;display:grid;gap:6px}
+.pcard figcaption b{font-family:var(--fh);font-size:17px}
+.pcard figcaption span{font-size:14px;color:var(--mut)}
+.credit{margin-top:14px;font-size:12.5px;color:var(--mut)}
+.credit a{text-decoration:underline}
 
 /* ================= кому подходит и меню недели ================= */
 .case h3{font-size:19px;line-height:1.3;margin-bottom:2px}
-.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cases{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .mweek{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
 @media (max-width:980px){.mweek{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:640px){.mweek{grid-template-columns:1fr}}
@@ -343,7 +337,8 @@ section{padding:72px 0}
 .rev .av.a2{background:var(--y);color:#17130E}
 .rev .nm{font-size:14.5px;font-weight:600}
 .rev .rl{font-size:12.5px;color:var(--mut)}
-@media (max-width:980px){.cases{grid-template-columns:1fr}}
+@media (max-width:1100px){.cases{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.cases{grid-template-columns:1fr}}
 .case{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;flex-direction:column;gap:14px;transition:transform .2s,box-shadow .2s}
 .case:hover{transform:translateY(-4px);box-shadow:var(--sh)}
 .case .who{font-size:13px;color:var(--mut);font-weight:600}
@@ -478,7 +473,7 @@ footer ul a:hover{color:var(--y)}
       <a href="#quality">Почему мы</a>
       <a href="menu.html">Меню</a>
       <a href="#calc">Расчёт</a>
-      <a href="#day">Производство</a>
+      <a href="#production">Производство</a>
       <a href="#faq">Вопросы</a>
     </nav>
     <div class="r">
@@ -499,7 +494,7 @@ footer ul a:hover{color:var(--y)}
       <h1>Горячий обед в офис <mark>точно ко времени</mark>, документы — в тот же день</h1>
       <p class="lead">Комплексы от <span class="num" data-f="price">290</span> ₽, шведская линия и индивидуальные рационы для команд от 10 человек. Корпоративное питание и доставка обедов в офис по Москве и Московской области.</p>
       <div class="acts">
-        <a class="btn btn-o" href="#day">День кухни</a>
+        <a class="btn btn-o" href="#production">Наше производство</a>
       </div>
       <div class="hero-trust">
         <span class="stars" aria-label="Рейтинг 4,9 из 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
@@ -594,7 +589,7 @@ footer ul a:hover{color:var(--y)}
   <div class="w">
     <div class="sec-h" data-rv>
       <h2><span class="k">Кому подходит</span>Устроим питание там, где своей кухни нет</h2>
-      <p>Офисы без столовой, производства и склады, бизнес-центры, медицинские и учебные учреждения. В каждой карточке пара строк о том, как питание устроено именно там.</p>
+      <p>Офисы без столовой, производства и склады, бизнес-центры, медицинские и учебные учреждения.</p>
     </div>
     <div class="cases">
       <article class="case" data-rv>
@@ -718,7 +713,7 @@ footer ul a:hover{color:var(--y)}
             <button class="btn btn-o" type="button" data-prev>Назад</button>
             <button class="btn btn-y" type="button" id="qsend">Прислать смету с КП</button>
           </div>
-          <p class="legal">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных. В прототипе данные никуда не отправляются.</p>
+          <p class="legal">Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
         </div>
 
         <div class="qpane" data-p="5">
@@ -735,20 +730,27 @@ footer ul a:hover{color:var(--y)}
 </section>
 
 <!-- ============ день кухни ============ -->
-<section id="day" style="padding-top:0">
+<section id="production" style="padding-top:0">
   <div class="w">
-    <div class="day" data-rv>
-      <span class="lbl" style="color:var(--deep-mut)">Один рабочий день кухни</span>
-      <h2>От приёмки сырья до вашей переговорной проходит восемь часов</h2>
-      <div class="tl">
-        <div class="tp"><time>04:40</time><b>Приёмка</b><p>Входной контроль сырья, документы на каждую поставку, отбраковка.</p></div>
-        <div class="tp"><time>05:30</time><b>Варка</b><p>Супы и горячее. Технолог снимает пробу — запись в журнале бракеража.</p></div>
-        <div class="tp"><time>09:00</time><b>Порционирование</b><p>Комплексы собираются по реестру площадок, боксы запаиваются.</p></div>
-        <div class="tp"><time>10:20</time><b>Загрузка</b><p>Термопорты Cambro, температура на выходе 78 °C — замер термощупом.</p></div>
-        <div class="tp"><time>11:40</time><b>Доставка</b><p>Свои курьеры, маршрут в приложении. Вы видите машину на карте.</p></div>
-        <div class="tp"><time>12:30</time><b>Раздача</b><p>Выкладка на линию за 12 минут, на выдаче не ниже 65 °C.</p></div>
-      </div>
+    <div class="sec-h" data-rv>
+      <h2><span class="k">Наше производство</span>Своя кухня: готовим утром, везём в термоконтейнерах</h2>
+      <p>Ни одна стадия не отдана подрядчику: сырьё принимаем сами, комплексы собираем по реестру площадок, упаковку забираем на переработку.</p>
     </div>
+    <div class="prod" data-rv>
+      <figure class="pcard">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Michael%20(Unsplash).jpg?width=900" alt="Повар нарезает зелень на производстве" loading="lazy">
+        <figcaption><b>Горячий цех</b><span>Супы и горячее готовим утром. Технолог снимает пробу с каждой партии.</span></figcaption>
+      </figure>
+      <figure class="pcard">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/DZ6%200553%20Busy%20kitchen%20staff%20prepare%20meals%20behind%20the%20counter%20as%20a%20customer%20waits%20and%20watches.jpg?width=900" alt="Команда кухни за работой" loading="lazy">
+        <figcaption><b>Команда и оборудование</b><span>Собственный персонал и стальное оборудование под поток до 500 порций в смену.</span></figcaption>
+      </figure>
+      <figure class="pcard">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chef%27s%20Station%20(Unsplash).jpg?width=900" alt="Подготовка продуктов и порционирование" loading="lazy">
+        <figcaption><b>Порционирование</b><span>Комплексы собираем по реестру площадок, боксы запаиваем и маркируем.</span></figcaption>
+      </figure>
+    </div>
+    <p class="credit" data-rv>Фото: Toa Heftiba и Todd Quackenbush (Unsplash, CC0), PattayaPatrol (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>) через Wikimedia Commons.</p>
   </div>
 </section>
 
@@ -867,7 +869,7 @@ footer ul a:hover{color:var(--y)}
         <input class="inp" id="fTel" type="tel" placeholder="Телефон" aria-label="Телефон" autocomplete="tel">
         <button class="btn btn-d" type="submit" id="fSend">Записаться на пробный обед</button>
         <div class="ok-mini" id="fOk"><svg class="ic"><use href="#i-check"/></svg><span>Заявка принята — перезвоним в течение 20 минут в рабочее время</span></div>
-        <span class="note">Отвечаем в течение 20 минут в рабочее время. Форма в прототипе не отправляет данные.</span>
+        <span class="note">Отвечаем в течение 20 минут в рабочее время.</span>
       </form>
     </div>
   </div>
@@ -898,7 +900,7 @@ footer ul a:hover{color:var(--y)}
         <li><a href="#calc">Расчёт стоимости</a></li>
         <li><a href="menu.html">Меню и цены</a></li>
         <li><a href="#quality">Наши гарантии</a></li>
-        <li><a href="#day">День кухни</a></li>
+        <li><a href="#production">Наше производство</a></li>
         <li><a href="#faq">Вопросы и ответы</a></li>
       </ul></div>
       <div><h5>Города</h5><ul>
@@ -970,7 +972,7 @@ footer ul a:hover{color:var(--y)}
 
   /* ---------- подносы ---------- */
   function dishPhoto(slug,name){
-    return '<div class="bph"><img src="photos/'+slug+'.jpg" alt="'+name+'" loading="lazy" onerror="this.style.display=&quot;none&quot;;this.parentNode.classList.add(&quot;ph&quot;)"><span class="ph-t">'+name+'<br>фото — слот под съёмку</span></div>';
+    return '<div class="bph"><img src="photos/'+slug+'.jpg" alt="'+name+'" loading="lazy" onerror="this.style.display=&quot;none&quot;;this.parentNode.classList.add(&quot;ph&quot;)"><span class="ph-t">'+name+'</span></div>';
   }
 
   var belt=[
